@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2563eb">
+<title>Prüfly</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar"><strong>Prüfly</strong><span>Parallelarbeit in 1 Minute</span></header>
+<main>
+  <section id="login" class="card" hidden>
+    <h2>Zugangscode</h2>
+    <p>Bitte gib den Zugangscode ein.</p>
+    <form id="login-form"><input id="code" type="password" autocomplete="current-password" required>
+    <button class="primary" type="submit">Weiter</button></form>
+    <p id="login-err" class="err" role="alert"></p>
+  </section>
+
+  <section id="step1" class="card" hidden>
+    <h2>1 · Foto vom Test</h2>
+    <p>Fotografiere den Test oder wähle ein Bild. Keine Namen von Kindern auf dem Foto.</p>
+    <label class="primary file">Foto aufnehmen / auswählen
+      <input id="photo" type="file" accept="image/*" capture="environment" hidden></label>
+    <div id="busy1" class="busy" hidden>Wird gelesen … (ca. 20 Sekunden)</div>
+    <p id="err1" class="err" role="alert"></p>
+  </section>
+
+  <section id="step2" class="card" hidden>
+    <h2>2 · Stimmt das so?</h2>
+    <p id="title2" class="big"></p>
+    <ul id="tasks2" class="tasks"></ul>
+    <ul id="warn2" class="warn"></ul>
+    <div class="row">
+      <button id="gen" class="primary">Neue Variante erstellen</button>
+      <button id="again" class="ghost">Anderes Foto</button>
+    </div>
+    <div id="busy2" class="busy" hidden>Variante wird erstellt …</div>
+    <p id="err2" class="err" role="alert"></p>
+  </section>
+
+  <section id="step3" class="card" hidden>
+    <h2>3 · Vorschau &amp; Druck</h2>
+    <div class="row">
+      <label class="chk"><input id="sol" type="checkbox"> Lösungsblatt anzeigen</label>
+    </div>
+    <iframe id="preview" title="Vorschau" sandbox="allow-same-origin"></iframe>
+    <p class="hint">Bitte kurz selbst nachrechnen/prüfen, bevor du es austeilst.</p>
+    <div class="row">
+      <button id="pdf" class="primary">PDF herunterladen</button>
+      <button id="pdfsol" class="ghost">Lösungs-PDF</button>
+      <button id="reroll" class="ghost">Noch eine Variante</button>
+    </div>
+    <p id="err3" class="err" role="alert"></p>
+  </section>
+</main>
+<footer>Es werden keine Fotos oder Arbeitsblätter gespeichert. · Prüfly ist ein Entwurfswerkzeug – die Lehrkraft prüft vor Gebrauch.</footer>
+<script src="app.js"></script>
+</body>
+</html>
