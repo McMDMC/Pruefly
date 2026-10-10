@@ -30,4 +30,5 @@ Fragt Zugangscode + API-Key ab (Secret Manager) und gibt die URL aus. Ohne `PRUE
 
 ## Offen
 - `PRUEFLY_GEMINI_MODEL` gegen die Vertex-Modellliste prüfen (Fallback-Provider).
-- Rechtlich: Umgang mit Verlagsmaterial als Vorlage; Schülernamen auf Fotos.
+- Verlagsmaterial als Vorlage: entschieden – nur privater Gebrauch (Joanna), keine Weitergabe, kein kommerzieller Einsatz vor rechtlicher Klärung.
+- Schülernamen auf Fotos: UI warnt, technischer Schutz fehlt noch.

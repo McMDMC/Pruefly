@@ -51,5 +51,5 @@ Differenzierung (3 levels), Bildungsplan context injection, new task types, Grun
 
 - **`ANTHROPIC_API_KEY`** — needed to run for real. Put it in Secret Manager (see `deploy.sh`).
 - **Gemini model id** — set `PRUEFLY_GEMINI_MODEL`; check the exact GA id in the Vertex model list before relying on it.
-- **Publisher material.** Variants derive from publisher worksheets. Fine for a teacher's own classroom; decide before any commercial rollout. The publisher line printed on the sheet can be turned off in `pruefly/render/html.py`.
+- **Publisher material — DECIDED (Michael, 2026-10-10):** allowed as input, **private use by Joanna only**. No sharing of the URL/access code, no distribution or sale of generated sheets, no commercial rollout until the legal question is answered. Nothing is stored server-side, so no publisher content persists in Prüfly.
 - **Pupil data.** Tell Joanna not to photograph sheets with pupil names. Nothing is stored, but the photo does reach the model provider.
