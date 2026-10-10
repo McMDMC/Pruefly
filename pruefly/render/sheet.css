@@ -1,0 +1,48 @@
+@page { size: A4; margin: 14mm 15mm 16mm 15mm;
+  @bottom-center { content: "Prüfly · Seite " counter(page) " von " counter(pages); font: 8pt sans-serif; color: #888; } }
+:root { --ink:#1b1b1f; --muted:#6b6b76; --line:#9aa0aa; --sol:#c2410c; }
+* { box-sizing: border-box; }
+html { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; color: var(--ink); font-size: 13pt; line-height: 1.35; }
+body { margin: 0; background: #fff; }
+.sheet { max-width: 182mm; margin: 0 auto; }
+header.top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 3mm; margin-bottom: 5mm; gap: 8mm; }
+header.top h1 { font-size: 19pt; margin: 0; }
+header.top .meta { font-size: 11pt; white-space: nowrap; }
+.sol-banner { background: #fff7ed; border: 1.5px solid var(--sol); color: var(--sol); padding: 2mm 3mm; border-radius: 2mm; font-weight: 700; margin-bottom: 4mm; }
+.task { break-inside: avoid; margin: 0 0 6mm; padding: 0 0 0 4mm; border-left: 4px solid var(--tc, #2563eb); }
+.task h2 { font-size: 13.5pt; margin: 0 0 1mm; }
+.task h2 .no { display: inline-block; min-width: 7mm; height: 7mm; line-height: 7mm; text-align: center; background: var(--tc, #2563eb); color: #fff; border-radius: 50%; margin-right: 2mm; font-size: 11pt; }
+.task .instr { color: var(--muted); font-size: 11pt; margin: 0 0 2.5mm; }
+.blank { display: inline-block; min-width: 14mm; border-bottom: 1.6px solid var(--ink); height: 1.15em; vertical-align: -0.15em; text-align: center; }
+.sol .blank { color: var(--sol); font-weight: 700; border-bottom-color: var(--sol); }
+.box { display: inline-block; min-width: 15mm; height: 11mm; border: 1.6px solid var(--ink); border-radius: 2mm; text-align: center; line-height: 11mm; font-weight: 700; }
+.sol .box.ans { color: var(--sol); border-color: var(--sol); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm 6mm; }
+.eq { font-size: 15pt; white-space: nowrap; }
+table.vn { border-collapse: collapse; }
+table.vn th, table.vn td { border: 1.6px solid var(--ink); padding: 2mm 5mm; text-align: center; min-width: 25mm; height: 11mm; }
+table.vn th { background: #f1f5f9; font-size: 11pt; }
+.sol td .ans { color: var(--sol); font-weight: 700; }
+.letters { display: flex; gap: 2mm; margin: 0 0 3mm; align-items: center; flex-wrap: wrap; }
+.letters .l { width: 10mm; height: 10mm; border: 1.6px solid var(--ink); text-align: center; line-height: 10mm; font-weight: 700; border-radius: 1.5mm; }
+.sol .letters .l.bad { border-color: var(--sol); color: var(--sol); text-decoration: line-through; }
+.sol .fix { color: var(--sol); font-weight: 700; margin-left: 2mm; }
+.words { display: flex; flex-wrap: wrap; gap: 3mm; margin-bottom: 3mm; }
+.words span { border: 1.6px dashed var(--line); padding: 1mm 4mm; border-radius: 2mm; font-size: 14pt; }
+.lines div { border-bottom: 1.4px solid var(--line); height: 10mm; line-height: 12mm; padding-left: 2mm; }
+.sol .lines div { color: var(--sol); font-weight: 700; border-bottom-color: var(--sol); }
+.chain { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5mm; margin-bottom: 3.5mm; font-size: 14pt; }
+.chain .op { color: var(--muted); font-size: 11pt; }
+.chain .arr { display: inline-flex; flex-direction: column; align-items: center; font-size: 10.5pt; font-weight: 700; }
+.chain .arr i { font-style: normal; line-height: .6; font-size: 14pt; color: var(--muted); }
+.measure { margin-bottom: 3mm; }
+.measure .bar { height: 4mm; background: #cbd5e1; border: 1.2px solid var(--ink); border-radius: 1mm; margin: 1mm 0; }
+.info { border: 2px solid var(--tc, #2563eb); border-radius: 3mm; padding: 3mm 5mm; display: inline-block; min-width: 70mm; }
+.info h3 { margin: 0 0 1.5mm; font-size: 13pt; }
+.info ul { margin: 0; padding-left: 5mm; }
+.gap { margin: 0 0 3mm; font-size: 14pt; }
+.bank { margin: 0 0 3mm; }
+.bank span { border: 1.6px solid var(--line); border-radius: 2mm; padding: 1mm 3mm; margin-right: 2.5mm; display: inline-block; }
+.shape-row { display: flex; align-items: center; gap: 4mm; margin-bottom: 3mm; flex-wrap: wrap; }
+.warn { font-size: 10pt; color: var(--muted); }
+p.text { margin: 0; white-space: pre-wrap; }
